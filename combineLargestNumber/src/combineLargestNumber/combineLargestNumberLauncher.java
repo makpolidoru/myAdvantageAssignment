@@ -41,12 +41,10 @@ public class combineLargestNumberLauncher {
 				}		    
 	
 			    if (legitNumbers) {
-			    	//TODO remove printing for debug - no need to print the input now:
-				    System.out.println("printing list: ");
-				    for(int j = 0; j < listNumbers.size(); j++) {
-				    	System.out.print(listNumbers.get(j));
-			        }
+			    	
 			    	//TODO  call combination algorithm
+			    	constructNumber computeCombo = new constructNumber(listNumbers);
+			    	computeCombo.generateCombinationOfNumbers();
 			    	//TODO  print output
 			    	//printing message to run again
 				    System.out.println("\n > Try again? (Y/N)");
@@ -67,11 +65,6 @@ public class combineLargestNumberLauncher {
 			    	if (answer.equalsIgnoreCase("Y")) runAgain = true;
 			    	else runAgain = false;
 			    }	    
-			    
-			    //TODO Remove debugging comments
-			    System.out.println("\nprogram out");
-		    	    
-		    	
 			}
 			catch (IllegalArgumentException exception) {
 	            // Catch expected IllegalArgumentExceptions.
