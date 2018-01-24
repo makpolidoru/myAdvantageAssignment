@@ -11,8 +11,11 @@ public class combinationGeneration {
 		listOfNumbers =  listInput;
 	}
 	
-	private static Comparator<Integer> sorter = new Comparator<Integer>(){
+	private Comparator<Integer> sorter = new IntegerComparator();
+			
+	private class IntegerComparator implements Comparator<Integer> {
         @Override
+        /*Implement Comparator ; custom ordering is needed*/
         public int compare(Integer in1, Integer in2){
         	//convert to toString:
             String str1 = in1.toString();
@@ -49,7 +52,6 @@ public class combinationGeneration {
 	    	System.out.print(listOfNumbers.get(j));
         }
     	//TODO  create combination algorithm
-	    int pos;
 	    String concatenatedCombo = "";
 	    Collections.sort(listOfNumbers, sorter);
 	    //concatenate in one string value :
