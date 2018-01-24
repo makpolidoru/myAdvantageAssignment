@@ -83,6 +83,13 @@ public class combineLargestNumberLauncher {
 	} // end of main 
 
 
+	
+	/**
+	 *This is a method that inspects whether the given numbers meet the requirements,
+	 *those being giving as input a banch of non negative integers
+	 *@param tokenToInspect : every given number
+	 *@return true/false : whether the number is legit or not.
+	 */
 	public static boolean inspectElements(String tokenToInspect) 
 	{
 		 try
@@ -92,9 +99,7 @@ public class combineLargestNumberLauncher {
 	            if (Integer.parseInt(tokenToInspect) < 0) {
 	            	// this gets caught in the catch block
 	            	throw new IllegalArgumentException("Only Positive Integers Should be inserted!"); 
-	            }
-	            
-	            
+	            }   
 	        } 
 	        catch (NumberFormatException e) 
 	        {
