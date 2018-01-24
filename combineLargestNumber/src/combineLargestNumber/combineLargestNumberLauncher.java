@@ -6,54 +6,80 @@ public class combineLargestNumberLauncher {
 
 	public static void main(String[] args) {
 		
-		Boolean legitNumbers = true;
-		ArrayList<Integer> listNumbers = new ArrayList<Integer>();
-				
-		System.out.println("Please provide a list of non negative integers, separated by comma. \nPress enter when finished.");
-		/*Delimiter: use comma as delimiter */
+		Boolean runAgain = true;
+		Scanner scanner=new Scanner(System.in).useDelimiter(","); //open scanner.
 		
-		try {
-			@SuppressWarnings("resource")
-			Scanner numbersScanner=new Scanner(System.in).useDelimiter(","); //anything non-digit.
-			String[] tokens = numbersScanner.nextLine().split(",");
-			String token; 
-			int i = 0;
+		while (runAgain) {
 			
-			while (legitNumbers && i<tokens.length) {
-				for (i = 0; i < tokens.length; i++) {
-					//inspect each given token. if token is a legit non negative integer, then add it to the list.
-					token = tokens[i];
-					if(inspectElements(token)) { 
-						 System.out.println("got in: "+token);	
-						 listNumbers.add(Integer.parseInt(token));
-					 }
-					 //if token is not an integer or is negative, then ignore alls et of numbers and clear contents of list.
-					 else {
-						 legitNumbers = false;
-						 listNumbers.clear();
-					 }
-			     }
+			Boolean legitNumbers = true;
+			ArrayList<Integer> listNumbers = new ArrayList<Integer>();
+					
+			System.out.println(" > Please provide a list of non negative integers, separated by comma. \nPress enter when finished.");
+			/*Delimiter: use comma as delimiter */
+			
+			try {
+				@SuppressWarnings("resource")
+				String[] tokens = scanner.nextLine().split(",");
+				String token; 
+				int i = 0;
+				
+				while (legitNumbers && i<tokens.length) {
+					for (i = 0; i < tokens.length; i++) {
+						//inspect each given number/token. if token is a legit non negative integer, then add it to the list.
+						token = tokens[i];
+						if(inspectElements(token)) { 
+							//TODO remove debugging comments later 
+							 System.out.println("got in: "+token);	
+							 listNumbers.add(Integer.parseInt(token));
+						 }
+						 //if token is not an integer or is negative, then ignore all set of numbers and clear contents of list.
+						 else {
+							 legitNumbers = false;
+							 listNumbers.clear();
+						 }
+				     }
+				}		    
+	
+			    if (legitNumbers) {
+			    	//TODO remove printing for debug - no need to print the input now:
+				    System.out.println("printing list: ");
+				    for(int j = 0; j < listNumbers.size(); j++) {
+				    	System.out.print(listNumbers.get(j));
+			        }
+			    	//TODO  call combination algorithm
+			    	//TODO  print output
+			    	//printing message to run again
+				    System.out.println("\n > Try again? (Y/N)");
+			    	String answer = scanner.nextLine();
+			    	System.out.println(answer);
+			    	
+			    	if (answer.equalsIgnoreCase("Y")) runAgain = true;
+			    	else runAgain = false;
+				    
+			    }
+			    else {
+			    	//if number were not legit
+			    	System.out.println("Try again? (Y/N)");
+			    	String answer = scanner.nextLine();
+			    	//TODO remove the below print:
+			    	System.out.println(answer);
+			    	
+			    	if (answer.equalsIgnoreCase("Y")) runAgain = true;
+			    	else runAgain = false;
+			    }	    
+			    
+			    //TODO Remove debugging comments
+			    System.out.println("\nprogram out");
+		    	    
+		    	
 			}
-			
-		    numbersScanner.close();
-
-		    
-		    //constructNumber c = new constructNumber();
-		    
-		    //System.out.println("\nprogram out");
-	    	    
-	    	
+			catch (IllegalArgumentException exception) {
+	            // Catch expected IllegalArgumentExceptions.
+	            
+			}
 		}
-		catch (IllegalArgumentException exception) {
-            // Catch expected IllegalArgumentExceptions.
-            
-		}
-		//TODO -> in computing function throw exception when negative numbers, or decimal, are given
-		/*since scanner considers everything non digit as delimiter*/
-
-		//print what was the input
-		//System.out.println(a + " " + b + " " + c);
-		//TODO print the computed output of the function:
+		scanner.close();
+		System.out.println("\nProgram out of loop! Bye!");
 	} // end of main 
 
 
