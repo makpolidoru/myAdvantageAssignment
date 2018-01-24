@@ -28,8 +28,6 @@ public class CombineLargestNumberLauncher {
 						//inspect each given number/token. if token is a legit non negative integer, then add it to the list.
 						token = tokens[i];
 						if(inspectElements(token)) { 
-							//TODO remove debugging comments later 
-							 System.out.println("got in the list: "+token);	
 							 listNumbers.add(Integer.parseInt(token));
 						 }
 						 //if token is not an integer or is negative, then ignore all set of numbers and clear contents of list.
