@@ -29,7 +29,7 @@ public class combineLargestNumberLauncher {
 						token = tokens[i];
 						if(inspectElements(token)) { 
 							//TODO remove debugging comments later 
-							 System.out.println("got in: "+token);	
+							 System.out.println("got in the list: "+token);	
 							 listNumbers.add(Integer.parseInt(token));
 						 }
 						 //if token is not an integer or is negative, then ignore all set of numbers and clear contents of list.
@@ -44,7 +44,7 @@ public class combineLargestNumberLauncher {
 			    	
 			    	//TODO  call combination algorithm
 			    	combinationGeneration computeCombo = new combinationGeneration(listNumbers);
-			    	computeCombo.generateCombinationOfNumbers();
+			    	computeCombo.generateLargestCombinationOfNumbers();
 			    	//TODO  print output
 			    	//printing message to run again
 				    System.out.println("\n > Try again? (Y/N)");
