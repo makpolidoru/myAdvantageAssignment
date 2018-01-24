@@ -2,10 +2,10 @@ package combineLargestNumber;
 
 import java.util.ArrayList;
 
-public class constructNumber {
+public class combinationGeneration {
 	
 	private static ArrayList<Integer> listOfNumbers;
-	public constructNumber(ArrayList<Integer> listInput) {
+	public combinationGeneration(ArrayList<Integer> listInput) {
 		listOfNumbers =  listInput;
 	}
 	

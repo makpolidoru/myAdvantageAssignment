@@ -43,7 +43,7 @@ public class combineLargestNumberLauncher {
 			    if (legitNumbers) {
 			    	
 			    	//TODO  call combination algorithm
-			    	constructNumber computeCombo = new constructNumber(listNumbers);
+			    	combinationGeneration computeCombo = new combinationGeneration(listNumbers);
 			    	computeCombo.generateCombinationOfNumbers();
 			    	//TODO  print output
 			    	//printing message to run again
