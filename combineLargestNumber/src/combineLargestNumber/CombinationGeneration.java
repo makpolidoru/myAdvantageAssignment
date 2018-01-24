@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class combinationGeneration {
+public class CombinationGeneration {
 	
 	private static ArrayList<Integer> listOfNumbers;
-	public combinationGeneration(ArrayList<Integer> listInput) {
+	public CombinationGeneration(ArrayList<Integer> listInput) {
 		listOfNumbers =  listInput;
 	}
 	
@@ -29,7 +29,6 @@ public class combinationGeneration {
  
             	String initial1 = str1;
             	String initial2 = str2;
-            	System.out.println(str1+" and second: "+str2);
 	            //if they are not, we need to keep the one with the greater 1st digit, no matter the length.
 	            //To compare, we need to bring them on the same length.
 	            int max_length = Math.max(str1.length(), str2.length());
@@ -42,51 +41,20 @@ public class combinationGeneration {
     };
 	
 	/**
-	 *This is a method that generates the largest number combining the given integers
+	 *This is a method that generates and returns the largest number combining the given integers
 	 *@input : the list of non negative integers
+	 @return : combination of integers that give the largest result as String.
 	 */
-	protected static void generateLargestCombinationOfNumbers() {
-		//TODO remove printing for debug - no need to print the input now:
-	    System.out.println("printing list as given in input: ");
-	    for(int j = 0; j < listOfNumbers.size(); j++) {
-	    	System.out.print(listOfNumbers.get(j));
-        }
-    	//TODO  create combination algorithm
+	protected static String generateLargestCombinationOfNumbers() {
 	    String concatenatedCombo = "";
 	    Collections.sort(listOfNumbers, sorter);
 	    //concatenate in one string value :
-	   
         for(Integer token:listOfNumbers){
         	concatenatedCombo += token;
         }
-        System.out.println("\nPrinting concatenated combination: "+concatenatedCombo);
+       return concatenatedCombo;
        
     }
 	   
-	
-//	/**
-//	 *This is a method to find the first digit of any number in the list
-//	 * @param num : the inout number 
-//	 * @return integer : the 1 digit
-//	 */
-//	public static int firstDigit(int num)
-//    {
-//        // Remove last digit from number
-//        // till only one digit is left
-//        while (num >= 10) 
-//            num /= 10;
-//     
-//        // return the first digit
-//        return num;
-//    }
 
-	/**
-	 *This is a method that returns the generated largest number.
-	 *@input : the list of non negative integers
-	 *@return : combination of integers that give the largest result as String.
-	 */
-	protected static String getLargestCombination() {
-		
-		return "TEST";
-	}
 }

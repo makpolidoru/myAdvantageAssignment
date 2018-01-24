@@ -2,7 +2,7 @@ package combineLargestNumber;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class combineLargestNumberLauncher {
+public class CombineLargestNumberLauncher {
 
 	public static void main(String[] args) {
 		
@@ -42,26 +42,21 @@ public class combineLargestNumberLauncher {
 	
 			    if (legitNumbers) {
 			    	
-			    	//TODO  call combination algorithm
-			    	combinationGeneration computeCombo = new combinationGeneration(listNumbers);
-			    	computeCombo.generateLargestCombinationOfNumbers();
-			    	//TODO  print output
+			    	//create object constructor in order to call combination algorithm
+			    	CombinationGeneration computeCombo = new CombinationGeneration(listNumbers);
+			    	//print final concatenated number :
+			    	System.out.println("\nPrinting concatenated combination: "+ computeCombo.generateLargestCombinationOfNumbers());
+			    	
 			    	//printing message to run again
 				    System.out.println("\n > Try again? (Y/N)");
 			    	String answer = scanner.nextLine();
-			    	System.out.println(answer);
-			    	
 			    	if (answer.equalsIgnoreCase("Y")) runAgain = true;
-			    	else runAgain = false;
-				    
+			    	else runAgain = false;    
 			    }
 			    else {
-			    	//if number were not legit
-			    	System.out.println("Try again? (Y/N)");
-			    	String answer = scanner.nextLine();
-			    	//TODO remove the below print:
-			    	System.out.println(answer);
-			    	
+			    	//if 1 or more numbers were not legit
+			    	System.out.println("Give input properly.\nTry again? (Y/N)");
+			    	String answer = scanner.nextLine();			    	
 			    	if (answer.equalsIgnoreCase("Y")) runAgain = true;
 			    	else runAgain = false;
 			    }	    
@@ -72,7 +67,7 @@ public class combineLargestNumberLauncher {
 			}
 		}
 		scanner.close();
-		System.out.println("\nProgram out of loop! Bye!");
+		System.out.println("\nBye!");
 	} // end of main 
 
 
