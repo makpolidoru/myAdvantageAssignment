@@ -11,9 +11,9 @@ public class combinationGeneration {
 		listOfNumbers =  listInput;
 	}
 	
-	private Comparator<Integer> sorter = new IntegerComparator();
+	private static Comparator<Integer> sorter = new IntegerComparator();
 			
-	private class IntegerComparator implements Comparator<Integer> {
+	private static class IntegerComparator implements Comparator<Integer> {
         @Override
         /*Implement Comparator ; custom ordering is needed*/
         public int compare(Integer in1, Integer in2){
