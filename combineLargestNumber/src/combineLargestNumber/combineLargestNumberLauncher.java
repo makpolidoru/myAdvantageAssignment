@@ -10,15 +10,20 @@ public class combineLargestNumberLauncher {
 		ArrayList<Integer> listNumbers = new ArrayList<Integer>();
 				
 		System.out.println("Please provide a list of non negative integers, separated by comma. \nPress enter when finished.");
-		/*Delimiter:use comma as delimiter */
+		/*Delimiter: use comma as delimiter */
+		
 		try {
+			@SuppressWarnings("resource")
 			Scanner numbersScanner=new Scanner(System.in).useDelimiter(","); //anything non-digit.
 			String[] tokens = numbersScanner.nextLine().split(",");
+			String token; 
+			int i = 0;
 			
-			while (legitNumbers) {
-				for (String token : tokens) {
+			while (legitNumbers && i<tokens.length) {
+				for (i = 0; i < tokens.length; i++) {
 					//inspect each given token. if token is a legit non negative integer, then add it to the list.
-					 if(inspectElements(token)) { 
+					token = tokens[i];
+					if(inspectElements(token)) { 
 						 System.out.println("got in: "+token);	
 						 listNumbers.add(Integer.parseInt(token));
 					 }
@@ -31,7 +36,11 @@ public class combineLargestNumberLauncher {
 			}
 			
 		    numbersScanner.close();
-		    System.out.println("\nprogram out");
+
+		    
+		    //constructNumber c = new constructNumber();
+		    
+		    //System.out.println("\nprogram out");
 	    	    
 	    	
 		}
