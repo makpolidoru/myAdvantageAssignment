@@ -21,14 +21,14 @@ public class CombineLargestNumberLauncher {
 				@SuppressWarnings("resource")
 				String[] tokens = scanner.nextLine().split(",");
 				String token; 
-				int i = 0;
+				int i =0;
 				
 				while (legitNumbers && i<tokens.length) {
 					for (i = 0; i < tokens.length; i++) {
 						//inspect each given number/token. if token is a legit non negative integer, then add it to the list.
 						token = tokens[i];
-						if(inspectElements(token)) { 
-							 listNumbers.add(Integer.parseInt(token));
+						if(inspectElements(token.trim())) { 
+							 listNumbers.add(Integer.parseInt(token.trim()));
 						 }
 						 //if token is not an integer or is negative, then ignore all set of numbers and clear contents of list.
 						 else {
