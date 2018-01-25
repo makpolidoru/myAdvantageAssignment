@@ -16,6 +16,6 @@ as a string. For example
 
 **Main method contained in CombineLargestNumberLauncher.java file. Run  CombineLargestNumberLauncher.java to launch.**
 
-**For ConcateTest.java to run, a JUnit library is needed. For the sake of the performed test, JUnit 5 was used.(Note: The aforementionned examples were used as test cases in ConcateTest/java).**
+**For ConcateTest.java to run, a JUnit library is needed. For the sake of the performed test, JUnit 5 was used. (Note: The aforementionned examples were used as test cases in ConcateTest/java).**
 
 **FYI: IDE used was Eclipse Oxygen.**
