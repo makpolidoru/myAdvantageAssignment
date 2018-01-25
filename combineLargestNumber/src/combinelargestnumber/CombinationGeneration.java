@@ -43,7 +43,7 @@ public class CombinationGeneration {
 	/**
 	 *This is a method that generates and returns the largest number combining the given integers
 	 *@input : the list of non negative integers
-	 @return : combination of integers that give the largest result as String.
+	 *@return : combination of integers that give the largest result as String.
 	 */
 	protected static String generateLargestCombinationOfNumbers() {
 	    String concatenatedCombo = "";
