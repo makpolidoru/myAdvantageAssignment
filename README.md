@@ -12,7 +12,7 @@ as a string. For example
 
 ```given [5, 50, 56] it returns "56550" (56 + 5 + 50)```
 
-```given 420, 42, 423] it returns "42423420" (42 + 423 + 420)```
+```given [420, 42, 423] it returns "42423420" (42 + 423 + 420)```
 
 **Main method contained in CombineLargestNumberLauncher.java file. Run  CombineLargestNumberLauncher.java to launch.**
 
