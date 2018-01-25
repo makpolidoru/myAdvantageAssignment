@@ -1,4 +1,4 @@
-package combineLargestNumber;
+package combinelargestnumber;
 import java.util.ArrayList;
 import java.util.Scanner;
 
