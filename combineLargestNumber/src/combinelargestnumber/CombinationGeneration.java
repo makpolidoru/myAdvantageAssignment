@@ -4,20 +4,25 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+/**
+ * Class used for generating the largest possible concatenation of given integers.
+ * @author makpo
+ *
+ */
 public class CombinationGeneration {
 	
-	private static ArrayList<Integer> listOfNumbers;
+	private ArrayList<Integer> listOfNumbers;
+	
+	private Comparator<Integer> sorter = new IntegerComparator();
+	
 	public CombinationGeneration(ArrayList<Integer> listInput) {
 		listOfNumbers =  listInput;
 	}
 	
-	private static Comparator<Integer> sorter = new IntegerComparator();
-			
-	private static class IntegerComparator implements Comparator<Integer> {
+	private class IntegerComparator implements Comparator<Integer> {
         @Override
         /*Implement Comparator ; custom ordering is needed*/
-        public int compare(Integer in1, Integer in2){
-        	//convert to toString:
+        public int compare(Integer in1, Integer in2) {
             String str1 = in1.toString();
             String str2 = in2.toString();
  
@@ -45,7 +50,7 @@ public class CombinationGeneration {
 	 *@input : the list of non negative integers
 	 *@return : combination of integers that give the largest result as String.
 	 */
-	protected  String generateLargestCombinationOfNumbers() {
+	protected String generateLargestCombinationOfNumbers() {
 	    String concatenatedCombo = "";
 	    Collections.sort(listOfNumbers, sorter);
 	    //concatenate in one string value :
