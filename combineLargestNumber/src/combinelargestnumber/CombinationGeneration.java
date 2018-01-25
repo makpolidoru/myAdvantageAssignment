@@ -45,7 +45,7 @@ public class CombinationGeneration {
 	 *@input : the list of non negative integers
 	 *@return : combination of integers that give the largest result as String.
 	 */
-	protected static String generateLargestCombinationOfNumbers() {
+	protected  String generateLargestCombinationOfNumbers() {
 	    String concatenatedCombo = "";
 	    Collections.sort(listOfNumbers, sorter);
 	    //concatenate in one string value :
